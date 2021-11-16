@@ -1,11 +1,14 @@
 8.
 1)
 HISTFILESIZE - максимальное число строк в файле истории для сохранения, строка 1155
+
 HISTSIZE - число команд для сохранения, строка 1178
 
 2)
 ignoreboth это сокращение для 2х директив ignorespace and ignoredups, 
+
 ignorespace - не сохранять команды начинающиеся с пробела, 
+
 ignoredups - не сохранять команду, если такая уже имеется в истории.
 
 9.
@@ -16,11 +19,14 @@ ignoredups - не сохранять команду, если такая уже 
 
 10.
 touch {000001..100000}.txt - создаст в текущей директории соответсвющее число файлов.
+
 300000 - создать не удасться, это слишком длинный список аргументов, максимальное число получил экспериментально - 128189
 
 11.
 проверяет условие у -d /tmp и возвращает ее статус (0 или 1), наличие катаолга /tmp
+
 Например в скрипте можно так:
+
 if [[ -d /tmp ]]
 then
     echo "каталог есть"
@@ -29,19 +35,29 @@ else
 fi
 
 12.
-vagrant@vagrant:~$ mkdir /tmp/new_path_dir/
-vagrant@vagrant:~$ cp /bin/bash /tmp/new_path_dir/
-vagrant@vagrant:~$ type -a bash
+vagrant@vagrant: mkdir /tmp/new_path_dir/
+
+vagrant@vagrant: cp /bin/bash /tmp/new_path_dir/
+
+vagrant@vagrant: type -a bash
+
 bash is /usr/bin/bash
+
 bash is /bin/bash
-vagrant@vagrant:~$ PATH=/tmp/new_path_dir/:$PATH
-vagrant@vagrant:~$ type -a bash
+
+vagrant@vagrant: PATH=/tmp/new_path_dir/:$PATH
+
+vagrant@vagrant: type -a bash
+
 bash is /tmp/new_path_dir/bash
+
 bash is /usr/bin/bash
+
 bash is /bin/bash
 
 13.
 at - команда запускается в указанное время (в параметре)
+
 batch - запускается когда уровень загрузки системы снизится ниже 1.5.
 
 14.
